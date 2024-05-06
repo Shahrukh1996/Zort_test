@@ -1,0 +1,9 @@
+remoteUrl:              https://secure.zortout.com/Home/LogOn
+swipe_long_scroll:      0.8
+max_timeout:            120
+global_timeout:         30
+small_timeout:          10
+short_timeout:          5
+mini_timeout:           2
+min_timeout:            1
+mini_retry:             3

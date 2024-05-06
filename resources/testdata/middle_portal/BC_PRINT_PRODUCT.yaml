@@ -1,0 +1,172 @@
+TC_ALL:
+  pre_data:
+    product_page:
+      main_menu: 'สินค้า'
+      sub_menu: 'เพิ่มสินค้า'
+  test_data:
+    add_product:
+      details_data:
+        code: 'product-code-'
+        name: 'product-name-barcode'
+        image: 'image_product.png'
+        barcode: 'non'  # non=ใช้ code เป็น barcode
+      price_data:
+        purchase: '10'
+        selling: '10'
+      warehouse_data:
+        quantity: '1'
+        stock: 'warehouse-name-barcode'
+    edit_product:
+      general_data:
+        description: 'product-description'
+
+TC_001:
+  pre_data:
+    product_page:
+      main_menu: 'สินค้า'
+      sub_menu: 'เพิ่มสินค้า'
+  test_data:
+    add_product:
+      details_data:
+        code: 'product-code-'
+        name: 'product-name-barcode'
+        image: 'image_product.png'
+      warehouse_data:
+        quantity: '1'
+        stock: 'warehouse-name-barcode'
+
+TC_002:
+  test_data:
+    print_barcode:
+      type: 'บาร์โค้ด'
+      format: 'ทั่วไป'
+      amount: '0'
+    expect_print_barcode:
+      bc_nomall:
+        name: 'product-name-barcode'
+        description: 'product-description'
+        selling: '10'
+
+TC_003:
+  test_data:
+    print_barcode:
+      type: 'บาร์โค้ด'
+      format: 'แค็ตตาล็อก'
+      amount: '0'
+    expect_print_barcode:
+      bc_catalog:
+        name: 'product-name-barcode'
+        description: 'product-description'
+        selling: '10'
+
+TC_004:
+  test_data:
+    print_barcode:
+      type: 'บาร์โค้ด'
+      format: 'บาร์โค้ด 2 คอลัมน์ (A4)'
+      amount: '2'
+    expect_print_barcode:
+      bc_2column_a4:
+        name: 'product-name-barcode'
+        selling: '10'
+
+TC_005:
+  test_data:
+    print_barcode:
+      type: 'บาร์โค้ด'
+      format: 'บาร์โค้ด 3 คอลัมน์ (A4)'
+      amount: '3'
+    expect_print_barcode:
+      bc_3column_a4:
+        name: 'product-name-barcode'
+        selling: '10'
+
+TC_006:
+  test_data:
+    print_barcode:
+      type: 'บาร์โค้ด'
+      format: 'บาร์โค้ด 1 คอลัมน์ (สติ๊กเกอร์ 5x3 ซม.)'
+      amount: '1'
+    expect_print_barcode:
+      bc_1column_stk:
+        name: 'product-name-barcode'
+        selling: '10'
+
+TC_007:
+  test_data:
+    print_barcode:
+      type: 'บาร์โค้ด'
+      format: 'บาร์โค้ด 3 คอลัมน์ (สติ๊กเกอร์)'
+      amount: '3'
+    expect_print_barcode:
+      bc_3column_stk:
+        name: 'product-name-barcode'
+        selling: '10'
+
+TC_008:
+  test_data:
+    print_barcode:
+      type: 'คิวอาร์โค้ด'
+      format: 'ทั่วไป'
+      amount: '0'
+    expect_print_barcode:
+      qr_nomall:
+        name: 'product-name-barcode'
+        description: 'product-description'
+        selling: '10'
+
+TC_009:
+  test_data:
+    print_barcode:
+      type: 'คิวอาร์โค้ด'
+      format: 'แค็ตตาล็อก'
+      amount: '0'
+    expect_print_barcode:
+      qr_catalog:
+        name: 'product-name-barcode'
+        description: 'product-description'
+        selling: '10'
+
+TC_010:
+  test_data:
+    print_barcode:
+      type: 'คิวอาร์โค้ด'
+      format: 'บาร์โค้ด 2 คอลัมน์ (A4)'
+      amount: '2'
+    expect_print_barcode:
+      qr_2column_a4:
+        name: 'product-name-barcode'
+        selling: '10'
+
+TC_011:
+  test_data:
+    print_barcode:
+      type: 'คิวอาร์โค้ด'
+      format: 'บาร์โค้ด 3 คอลัมน์ (A4)'
+      amount: '3'
+    expect_print_barcode:
+      qr_3column_a4:
+        name: 'product-name-barcode'
+        selling: '10'
+
+TC_012:
+  test_data:
+    print_barcode:
+      type: 'คิวอาร์โค้ด'
+      format: 'บาร์โค้ด 1 คอลัมน์ (สติ๊กเกอร์ 5x3 ซม.)'
+      amount: '1'
+    expect_print_barcode:
+      qr_1column_stk:
+        name: 'product-name-barcode'
+        selling: '10'
+
+TC_013:
+  test_data:
+    print_barcode:
+      type: 'คิวอาร์โค้ด'
+      format: 'บาร์โค้ด 3 คอลัมน์ (สติ๊กเกอร์)'
+      amount: '3'
+    expect_print_barcode:
+      qr_3column_stk:
+        name: 'product-name-barcode'
+        selling: '10'

@@ -1,0 +1,41 @@
+sell_03_04:
+  pre_data:
+    sell_list_page:
+      main_menu: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23\u0E02\u0E32\u0E22"
+      sub_menu: "\u0E14\u0E39\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23\u0E02\u0E32\u0E22"
+  test_data:
+    add_sell:
+      0:
+        contact:
+          choice: system
+          detail:
+            address: ''
+            branch:
+              iden: ''
+              name: ''
+              number: ''
+            code: '0000'
+            email: ''
+            name: "\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32-\u0E17\u0E14\u0E2A\u0E2D\u0E1A"
+            phone: ''
+        information:
+          expire_date:
+            day: ''
+            month: ''
+            year: ''
+          name: SO-EXPIRE-
+        product:
+          choice: single
+          detail:
+            1:
+              amount: ''
+              code: PD0001
+              discount: ''
+              name: "\u0E2A\u0E34\u0E19\u0E04\u0E49\u0E32-\u0E17\u0E14\u0E2A\u0E2D\
+                \u0E1A-\u0E17\u0E31\u0E48\u0E27\u0E44\u0E1B"
+              price: ''
+        transfer:
+          choice: wait
+          detail:
+            store: WH-SELL-DELETE
+    sell_name: SO-EXPIRE-R23X

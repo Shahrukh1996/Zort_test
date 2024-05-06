@@ -1,0 +1,30 @@
+side_menu_bar:
+    sell_list:
+      create_sell_list:  'สร้างรายการขาย'
+
+add_sell_page:
+  data:
+    list: รายการ
+    list_type: ประเภทรายการ
+    date: วันที่
+    ref: อ้างอิง
+    sales_funnel: ช่องทางการขาย
+  customer:
+    list_creator: ผู้สร้างรายการ
+    customer_name: ชื่อลูกค้า
+    customer_no: รหัสลูกค้า
+    customer_tel: เบอร์โทรศัพท์ลูกค้า
+    employee_tel: เบอร์มือถือลูกค้า
+    employee_email: อีเมลลูกค้า
+    employee_address: ที่อยู่ลูกค้า
+    tax_identification_number: เลขประจำตัวผู้เสียภาษี
+    branch_name: ชื่อสาขา
+    branch_number: เลขที่สาขา
+  recipient_information:
+    recipient_name: ชื่อผู้รับ
+    recipient_tel: เบอร์โทรศัพท์ผู้รับ
+    recipient_email: อีเมลผู้รับ
+    recipient_address: ที่อยู่/จัดส่ง
+  information_funnel:
+    recipient_funnel: ช่องทางจัดส่ง
+    tracking_no:  Tracking No.

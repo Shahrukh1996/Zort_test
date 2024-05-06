@@ -1,0 +1,51 @@
+pipeline {
+    agent { label "${agent}"}
+    environment {
+      CONCURRENT = "--processes 3"
+      TESTPATH = "./testscase"
+   }
+    stages {
+        stage('Dryrun Zortout Automation Website') {
+            steps {
+                echo 'Dryrun Zortout Automation Website'
+                script{
+                    bat "pabot --pabotlib ${CONCURRENT} --dryrun --outputdir testResultWebsite ${TESTPATH}"
+                }
+            }
+            post {
+            always {
+               echo "Publish Robot Framework test results"
+               robot logFileName: 'log.html', outputFileName: 'output.xml', outputPath: './testResultWebsite', reportFileName: 'report.html'
+               }
+            }
+        }
+        stage('Robocop Zortout Automation Website') {
+            steps {
+                    bat "robocop -A ./robocop.cfg ."
+            }
+            post {
+            always {
+                echo "Finished robocop"
+              }
+            success {
+                echo "Robocop passed"
+              }
+            failure {
+                echo "Robocop failed"
+              }
+            }
+        }
+        stage('rebot') {
+            steps {
+                echo "rebot report"
+                bat "python -m robot.rebot --outputdir ./testResultAll -o output.xml testResultWebsite/output.xml"
+            }
+            post {
+                always {
+                    echo "Publish Robot Framework test results"
+                    robot logFileName: 'log.html', outputFileName: 'output.xml', outputPath: './testResultAll', reportFileName: 'report.html'
+                }
+            }
+        }
+    }
+}

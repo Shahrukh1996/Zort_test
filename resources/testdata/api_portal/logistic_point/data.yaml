@@ -1,0 +1,8 @@
+request_url:
+  ip: 'http://171.103.241.242'
+  path: '/ZortMiddlewareService/Logistics/GetPrices'
+
+request_header:
+  accept: '*/*'
+  X-API-KEY: 'cf0109d6af67791bc00cc2e1879e389991a271a2a4fb80b058b4c8e358217c03'
+  Content-Type: 'application/json'

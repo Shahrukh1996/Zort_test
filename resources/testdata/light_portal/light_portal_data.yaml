@@ -1,0 +1,1180 @@
+public_user:
+  username:     'automatezort@gmail.com'
+  password:     '4ut0m4T3'
+
+sell_list_page:
+  test_status:  'ทดสอบ'
+  user_info: 'automation'
+  info:
+    refer:  'Doppio'
+    sales_channel:  'หน้าร้าน-ทดสอบ'
+  customer:
+    code:  '0000'
+  delivery:
+    cod_delivery: 'ขนส่ง-ทดสอบ-ปลายทาง'
+  product:
+    code: 'PD0001'
+    name: 'สินค้า-ทดสอบ-ทั่วไป'
+    amount_1:  1
+    amount_2:  2
+  price:
+    price_20:  20
+    price_30:  30
+    price_40:  40
+  status_success:  'สำเร็จ'
+  status_payment_waiting:  'รอการชำระเงิน'
+  status_payment_maximum:  'ชำระเกิน'
+  status_payment_minimum:  'ชำระบางส่วน'
+  status_payment_full:  'ชำระครบ'
+  status_transfer_waiting:  'รอโอนสินค้า'
+  status_transfer_partial_goods:  'โอนสินค้าบางส่วน'
+  status_delivery_waiting:  'ขนส่ง-ทดสอบ-ปกติ'
+  delivery_channel:  '-'
+  transfer_type:  'คลัง-ทดสอบ-A'
+
+detail_sell_list_page:
+  order_number_in_excel_file: 'Automate_testing'
+  name_of_order_on_advance_search_page: 'ขาย-ทดสอบ-ค้นหา'
+
+tc_66:
+  pre_data:
+    return_sell_list_page:
+      main_menu: 'รายการขาย'
+      sub_menu: 'รับคืนสินค้า'
+  test_data:
+    add_return_sell:
+      basic:
+        name: 'RETURNsell-TEST-PAYMENT-'
+        refer: 'อ้างอิง-ทดสอบ'
+        dealer: 'ตัวแทน-ทดสอบ'
+        tax_type: 'ไม่มีภาษี'
+        create_date:
+          year: '2566'
+          month: '5'
+          day: '3'
+      contact:
+        choice_add_tax: true       # true=เลือกระบุ | false=ไม่ระบุ
+        choice_add_customer: true  # true=เลือกจากระบบ | false=เลือกระบุเอง
+        tax_detail:
+          taxpayer: '0000000000000'
+          branch_name: 'สาขา-ทดสอบ'
+          branch_number: '123456'
+        customer_detail:
+          code: '0000'
+          name: 'ลูกค้า-ทดสอบ'
+          phone: '028765432'
+          email: 'customer@mail.com'
+          address: 'xxx yyy zzz 000'
+      product:
+        choice_add_product: true  # true=เลือกจากระบบ | false=เลือกระบุเอง
+        list:
+          product1:
+            code: 'PD0001'
+            name: 'สินค้า-ทดสอบ-ทั่วไป'
+            amount: 3
+            price: 10
+            rebate: 0
+    fully_payment:
+      method: 'ทดสอบ_ครบ'
+      date_time:
+        date:
+          year: '2566'
+          month: '5'
+          day: '3'
+        time:
+          hour: '15:00'
+          minute: '15:00'
+    over_payment:
+      amount: '50'
+      method: 'ทดสอบ_เกิน'
+      date_time:
+        date:
+          year: '2566'
+          month: '5'
+          day: '3'
+        time:
+          hour: '14:00'
+          minute: '14:00'
+    partial_payment:
+      amount: '10'
+      method: 'ทดสอบ_บางส่วน'
+      date_time:
+        date:
+          year: '2566'
+          month: '5'
+          day: '3'
+        time:
+          hour: '12:00'
+          minute: '12:00'
+  expect_data:
+    status_payment:
+      over: 'ชำระเกิน'
+      fully: 'ชำระครบ'
+      waiting: 'รอการชำระเงิน'
+      partial: 'ชำระบางส่วน'
+
+quotation:
+  pre_data:
+    quotation_page:
+      main_menu: 'รายการขาย'
+      sub_menu: 'ใบเสนอราคา'
+  customaer_code: 'C0008'
+  product_code: 'PD0001'
+  status_waiting: 'รออนุมัติ'
+  status_approved: 'อนุมัติแล้ว'
+
+return_page:
+  pre_data:
+    return_sell_page:
+      main_menu: 'รายการขาย'
+      sub_menu: 'รับคืนสินค้า'
+  status_success:  'สำเร็จ'
+  status_payment_waiting:  'รอการชำระเงิน'
+  status_payment_maximum:  'ชำระเกิน'
+  status_payment_minimum:  'ชำระบางส่วน'
+  status_payment_full:  'ชำระครบ'
+  status_transfer_waiting:  'รอโอนสินค้า'
+  status_transfer_partial_goods:  'โอนสินค้าบางส่วน'
+  shipping_thaipost: 'ไปรษณีย์ไทย'
+  product_code: 'PD0001'
+  payment_amount_10: '10'
+  payment_amount_20: '20'
+
+variant_page:
+  group_name:
+    name: 'TESTVARIANT'
+  type:
+    color: 'สี'
+    white_color: 'ขาว'
+    black_color: 'ดำ'
+    size: 'ไซส์'
+  confirm: 'confirm'
+  product_code: 'P0008'
+  product_name: 'TESTVARIANT01'
+
+report_page:
+  sumary_sales: 'ยอดขาย'
+
+tc_01:
+  warehouse_01: 'คลัง-ทดสอบ-สร้าง'
+  warehouse_02: 'คลัง-ทดสอบ-แก้ไข'
+  warehouse_type: 'ทั่วไป'
+
+tc_02:
+  pre_data:
+    main_menu: 'สินค้า'
+    sub_menu: 'คลังสินค้า/สาขา'
+  test_data:
+    advancedSearch:
+      code: 'SH0000'
+      name: 'คลัง-ทดสอบ-ค้นหา'
+      checkBox: true
+
+tc_03:
+  pre_data:
+    add_product_page:
+      main_menu: 'สินค้า'
+      sub_menu: 'เพิ่มสินค้า'
+    productPage:
+      main_menu: 'สินค้า'
+      sub_menu: 'สินค้า'
+  property: "ไม่มีคุณสมบัติ"
+  type: "สินค้า"
+  name: "สินค้า-ทดสอบ-สร้าง"
+  purchase_price: '10'
+  sell_price: '20'
+  bring_price: '10'
+  ready_for_sell: '10'
+  category: "หมวดหมู่-ทดสอบ"
+  warehouse: "คลัง-ทดสอบ-A"
+  name_edit: "สินค้า-ทดสอบ-แก้ไข"
+  remains: '10'
+  remains_edit: '100'
+  adjust_price: '10'
+
+tc_04:
+  import_type: "นำเข้าสินค้าใหม่"
+  product_id: "IMP0000"
+  product_name: "สินค้า-ทดสอบ-นำเข้า(เล็ก)"
+  product_category: "หมวดหมู่: หมวดหมู่-ทดสอบ"
+  product_tag: "สินค้า-นำเข้า"
+  purchase_price: "10"
+  sell_price: "10"
+  remains: "100  หน่วย"
+  ready_for_sell: "100  หน่วย"
+
+tc_06:
+  add_transfer_list:
+    basic_data:
+      name: 'โอน-ทดสอบ-'
+  product_id: 'PD0001'
+  store_a: 'คลัง-ทดสอบ-A'
+  store_b: 'คลัง-ทดสอบ-B'
+  transfer_status_waiting: 'รอโอนสินค้า'
+  product_amount_2: '2'
+
+tc_07:
+  add_transfer_list:
+    basic_data:
+      name: 'โอน-ทดสอบ-'
+  product_id: 'PD0001'
+  store_a: 'คลัง-ทดสอบ-A'
+  store_b: 'คลัง-ทดสอบ-B'
+  transfer_status_partial_goods: 'โอนสินค้าบางส่วน'
+  transfer_status_success: 'สำเร็จ'
+
+tc_08:
+  search_number:  'SH0000'
+  search_product: 'สินค้า-ทดสอบ-ทั่วไป'
+  search_warehouse: 'คลัง-ทดสอบ-A'
+  search_user_id: 'Quality Assurance'
+  search_date: '1 ก.พ. 2566'
+  search_type: 'โอน'
+  search_to_warehouse: 'คลัง-ทดสอบ-B'
+  search_status: 'สำเร็จ'
+
+tc_14:
+  # pre_data:
+  #   buy_list_page:
+  #     main_menu: 'รายการซื้อ'
+  #     sub_menu: 'ดูรายการซื้อ'
+  # test_data:
+  product_name: สินค้า-ทดสอบ-ทั่วไป
+  product_amount: '1'
+  contact_id: '0000'
+  vat_option: 'ไม่มีภาษี'
+  shipping_channel: 'ขนส่ง-ทดสอบ-ปกติ'
+  warehouse: 'คลัง-ทดสอบ-A'
+  payment_status: 'รอการชำระเงิน'
+  transfer_status: 'รอโอนสินค้า'
+  contact_name: 'ลูกค้า-ทดสอบ'
+  search_date: '1 มี.ค. 2566'
+  product_price: '10.01'
+  search_status: 'รอโอน'
+  search_warehouse: 'คลัง-ทดสอบ-A'
+  pay_status: 'รอชำระ'
+  create_date:
+    year: '2566'
+    month: '3'
+    day: '1'
+
+tc_17:
+  date: '1 ก.พ. 2566'
+  name_buy: 'ซื้อ-ทดสอบ-ค้นหา'
+  customer_name: 'ลูกค้า-ทดสอบ'
+  amount: '10.01'
+  product_name: 'สินค้า-ทดสอบ-ทั่วไป'
+  refer: 'อ้างอิง-ทดสอบ'
+  warehouse: 'คลัง-ทดสอบ-A'
+  phone: '028765432'
+  email: 'customer@mail.com'
+  serial_number: 'SN02'
+  payment_status: 'ชำระครบ'
+  success_status: 'สำเร็จ'
+
+tc_23:
+  pre_data:
+    product_list_page:
+      main_menu: 'สินค้า'
+      sub_menu: 'สินค้า'
+  search_id : PD0002
+  search_name: สินค้า-ทดสอบ-ฟังก์ชัน
+  search_min_sell: 10.01
+  search_min_purchase: 10.01
+  search_tag: สินค้า-ฟังก์ชัน
+  search_warehouse: คลัง-ทดสอบ-A
+  search_category: หมวดหมู่-ทดสอบ
+
+tc_24:
+  search_id: 'ขาย-ทดสอบ-ฟังก์ชัน'
+  search_customer: 'ลูกค้า-ทดสอบ'
+  search_product: 'สินค้า-ทดสอบ-ฟังก์ชัน'
+  search_refer: 'อ้างอิง-ทดสอบ'
+  search_shipping: 'ขนส่ง-ทดสอบ-ปกติ'
+  datetime:
+    day: '15'
+    month: '02'
+    year: '2566'
+
+tc_25:
+  search_id: 'ซื้อ-ทดสอบ-ฟังก์ชัน'
+  search_customer: 'ลูกค้า-ทดสอบ'
+  search_product: 'สินค้า-ทดสอบ-ฟังก์ชัน'
+  search_refer: 'อ้างอิง-ทดสอบ'
+
+tc_26:
+  order_type: 'หมวดหมู่'
+
+tc_28:
+  section:
+    category: 'หมวดหมู่'
+    sales_funnel: 'ช่องทางการขาย'
+    payment_method: 'ช่องทางการชำระเงิน'
+    customer: 'ลูกค้า'
+    customer_groups: 'กลุ่มลูกค้า'
+    dealer: 'ตัวแทนจำหน่าย'
+    user: 'ผู้ใช้งาน'
+    store_and_branch: 'คลัง/สาขา'
+
+tc_43:
+  product_id: "PD0001"
+  saleschannel: "หน้าร้าน-ทดสอบ"
+  contact: "ลูกค้า-ทดสอบ"
+  paper_size: "A4"
+  format_paper: "ทั่วไป"
+
+tc_44:
+  product_id: "PD0001"
+  saleschannel: "หน้าร้าน-ทดสอบ"
+  contact: "ลูกค้า-ทดสอบ"
+  paper_size: "A4"
+  format_paper: "ฟอร์มใบกำกับภาษี"
+
+tc_68:
+  product_id: "PD0001"
+  contact: "ลูกค้า-ทดสอบ"
+  paper_size: "A4"
+  format_paper: "ทั่วไป"
+  print_title: "ใบรับคืนสินค้า"
+
+tc_69:
+  product_id: "PD0001"
+  contact: "ลูกค้า-ทดสอบ"
+  paper_size: "A4"
+  format_paper: "ฟอร์มใบกำกับภาษี"
+  print_title: "ใบรับคืนสินค้า"
+
+tc_71:
+  return_prod_number: "CN-202212002"
+  warehouse: "คลัง / สาขา - ทั้งหมด"
+  customer_name: "ยุทธศาสตร์ ถนอมมิตรวัฒนา"
+  low_value: 0
+  high_value: 1000
+  product_id: "P0006"
+  tel_number: 0842289760
+  cumtomer_email: "yutthasart@zortout.com"
+  refer: "Test1234"
+
+tc_73:
+  product_id: "P0002"
+  amount: "2"
+  pack_amount: "1"
+  invalid_id: "TEST1234567890"
+  packed_id: 'IV-202301053'
+  warehouse: 'คลัง-ทดสอบ-A'
+  tracking_no:  "TX12345"
+
+tc_80:
+  pre_data:
+    sell_list_page:
+      main_menu: 'รายการขาย'
+      sub_menu: 'ดูรายการขาย'
+  product_id: "P0002"
+  amount: "1"
+  pack_amount: "1"
+  warehouse: 'คลัง-ทดสอบ-A'
+  tracking_no:  "TG12345"
+
+tc_97:
+  pre_data:
+    product_set_page:
+      main_menu: 'สินค้า'
+      sub_menu: 'สินค้าเป็นชุด'
+  test_data:
+    add_product_set:
+      code: 'SET-'
+      name: 'SET-TEST'
+      price: 100
+      exp_date:
+        year: '2566'
+        month: '12'
+        day: '31'
+      product:
+        - PD0001
+    edit_product_set:
+      code: 'SET-'
+      name: 'SET-TESTS'
+      price: 200
+
+  bundle_price: 800
+  product_name: 'TESTPRODUCTFORBUNDLE01'
+  product_amount: 1
+
+tc_100:
+  edit_sell_price: 700
+
+tc_103:
+  min_price: 500
+  max_price: 1000
+
+tc_110:
+  pre_data:
+    main_menu: 'สินค้า'
+    sub_menu: 'หมวดหมู่'
+  test_data:
+    add_category:
+      name: 'หมวดหมู่-ทดสอบ-add-'
+    edit_category:
+      name: 'หมวดหมู่-ทดสอบ-edit-'
+
+tc_ui_111:
+  pre_data:
+    retrun_buy_page:
+      main_menu: 'รายการซื้อ'
+      sub_menu: 'คืนสินค้า'
+  contact_id: 'C0008'
+  product_id: 'P0006'
+  product_amount: '1'
+  shipping_channel: 'Kerry'
+  discount: '500.00'
+  shipping_price: '50'
+  description: 'CH Test'
+  reference: 'Automate Test'
+  shipping:
+    hour: '12'
+    minute: '00'
+  previous_date: 30
+
+tc_ui_112:
+  pre_data:
+    main_menu: 'สินค้า'
+    sub_menu: 'คลังสินค้า/สาขา'
+  contact_id: 'C0008'
+  product_id: 'P0006'
+  product_amount: '2'
+  shipping_channel: 'Kerry'
+  discount: '500.00'
+  shipping_price: '50'
+  description: 'CH Test'
+  transfer_amount: '1'
+  warehouse:  'คลังสินค้าหลัก'
+  transfer_status:
+    some_transfer_status: 'โอนสินค้าบางส่วน'
+    all_transfer_status:  'สำเร็จ'
+  shipping:
+    day: '19'
+    month: '12'
+    year: '2565'
+    hour: '12'
+    minute: '00'
+  
+tc_ui_113:
+  contact_id: 'C0008'
+  product_id: 'P0006'
+  product_amount: '2'
+  shipping_channel: 'Kerry'
+  discount: '500.00'
+  shipping_price: '50'
+  description: 'CH Test'
+  payment:
+    channel: 'เงินสด'
+    some_price: 100
+    over_price: 1000
+  payment_status:
+    some_payment: 'ชำระบางส่วน'
+    full_payment: 'ชำระครบ'
+    over_payment: 'ชำระเกิน'
+  shipping:
+    day: '19'
+    month: '12'
+    year: '2565'
+    hour: '12'
+    minute: '00'
+  
+tc_ui_117:
+  return_buy_id:  DN-202302001
+  warehouse: คลัง / สาขา - ทั้งหมด
+  customer_name: ยุทธศาสตร์ ถนอมมิตรวัฒนา
+  min_price: 0
+  max_price: 1000
+  product_id: P0006
+  tel_number: 0842289760
+  email: yutthasart@zortout.com
+  refer: Test1234
+
+tc_ui_119:
+  product_id: P0002
+  product_amount: '2'
+  invalid_code: TEST1234567890
+  transfer_code: PO-202301053
+  warehouse: คลัง-ทดสอบ-A
+  transfer_amount: '1'
+  transfer_status: สำเร็จ
+
+tc_ui_120:
+  sales_summary_label:  ยอดขายตามหมวดหมู่
+  remain_warehouse_label:  รายหมวดหมู่
+  sales_summary_default_title:    ยอดขายรวม
+  remain_warehouse_default_title:   รายคลัง
+  prod_movement_default_title: 7 วัน
+  prod_movement_label: 1 เดือน
+  prod_movement_title: 1 เดือน
+  sales_summary_dropdown: [
+    กำไรจากการขาย,กำไรรวม,ยอดขายรวม,ยอดขายตามหมวดหมู่
+  ]
+  remain_warehouse_dropdown: [
+    รายคลัง,รายหมวดหมู่
+  ]
+  prod_movement_column: [
+    รหัสสินค้า,ชื่อสินค้า,คงเหลือ
+  ]
+  prod_movement_column_link: [
+    เข้า,ออก,เปลี่ยนแปลง
+  ]
+  prod_movement_dropdown: [
+    วันนี้,7 วัน,1 เดือน,3 เดือน
+  ]
+
+tc_ui_121:
+  date_period:
+    1_month: 'ย้อนหลัง 1 เดือน'
+    3_months: 'ย้อนหลัง 3 เดือน'
+
+tc_11:
+  add_sell_list:
+    test_data:
+      basic_data:
+        name: 'ขาย-ทดสอบ-ชำระ-'
+        refer: 'อ้างอิง-ทดสอบ'
+        funnel: 'หน้าร้าน-ทดสอบ'
+        # dealer: 'ตัวแทน-ทดสอบ'
+        tax_type: 'ไม่มีภาษี'
+        create_date:
+          year: '2566'
+          month: '3'
+          day: '1'
+        expired_date:
+          year: '2566'
+          month: '3'
+          day: '30'
+
+tc_12:
+  pre_data:
+    sell_add_page:
+      main_menu: 'รายการขาย'
+      sub_menu: 'สร้างรายการขาย'
+    seesell_page:
+      main_menu: 'รายการขาย'
+      sub_menu: 'ดูรายการขาย'
+  add_sell_list:
+    test_data:
+      basic_data:
+        name: 'ขาย-ทดสอบ-โอน-'
+        refer: 'อ้างอิง-ทดสอบ'
+        funnel: 'หน้าร้าน-ทดสอบ'
+        # dealer: 'ตัวแทน-ทดสอบ'
+        tax_type: 'ไม่มีภาษี'
+        create_date:
+          year: '2566'
+          month: '3'
+          day: '1'
+        expired_date:
+          year: '2566'
+          month: '3'
+          day: '30'
+
+tc_201:
+  pre_data:
+    contact_page:
+      main_menu: 'ลูกค้า/คู่ค้า'
+      sub_menu: 'ผู้ติดต่อ'
+  test_data:
+    add_contact:
+      basic_data:
+        group: 'ไม่มีกลุ่มลูกค้า'
+        code: 'contact-code-'
+        name: 'contact-name-create'
+        taxpayer: 'contact-taxpayer'
+        branch_name: 'contact-branch-name'
+        branch_number: 'contact-branch-number'
+        tag: 'contact-tag'
+      information_data:
+        telephone_number: '0987654321'
+        mobile_number: '0987654321'
+        fax_number: '023456789'
+        email: 'contact@hotmail.com'
+        address: 'contact-address'
+        contact: 'contact-test'
+      socialmedia_data:
+        facebook: 'contact-facebook'
+        line: 'contact-line'
+        instagram: 'contact-instagram'
+    edit_contact:
+      information_data:
+        name: 'contact-name-update'
+        description: 'contact-description'
+    pin_contact:
+      indexNo:
+        pin_in: '1'
+        un_pin: '10'
+
+tc_202:
+  pre_data:
+    contact_page:
+      main_menu: 'ลูกค้า/คู่ค้า'
+      sub_menu: 'ผู้ติดต่อ'
+  test_data:
+    advanced_search:
+      information_data:
+        code: 'contact-code-000000'
+        telephone_number: '0987654321'
+        name: 'contact-name-search'
+        email: 'contact@hotmail.com'
+        group: 'กลุ่มลูกค้า (ทั้งหมด)'
+        tag: 'contact-tag'
+        check_box: true
+
+tc_203:
+  pre_data:
+    contact_page:
+      main_menu: 'ลูกค้า/คู่ค้า'
+      sub_menu: 'ผู้ติดต่อ'
+  test_data:
+    import_contact:
+      information_data:
+        code: 'contact-code-import'
+        name: 'contact-name-excel'
+        branch_name: 'contact-branch-name'
+        facebook: 'contact-facebook'
+        line: 'contact-line'
+        instagram: 'contact-instagram'
+        taxpayer: 'contact-taxpayer'
+        telephone_number: '0987654321'
+        email: 'contact@hotmail.com'
+
+tc_204:
+  pre_data:
+    tab_total: 'ทั้งหมด'
+    tab_test: 'contact-category'
+    contact_page:
+      main_menu: 'ลูกค้า/คู่ค้า'
+      sub_menu: 'ผู้ติดต่อ'
+  test_data:
+    category_contact:
+      code: 'C1010'
+      name: 'contact-category'
+
+tc_205:
+  pre_data:
+    contact_page:
+      main_menu: 'ลูกค้า/คู่ค้า'
+      sub_menu: 'ผู้ติดต่อ'
+  test_data:
+    add_contact:
+      basic_data:
+        group: 'ไม่มีกลุ่มลูกค้า'
+        code: 'contact-code-'
+        name: 'contact-name-detail'
+        taxpayer: 'contact-taxpayer'
+        branch_name: 'contact-branch-name'
+        branch_number: 'contact-branch-number'
+        tag: 'contact-tag'
+      information_data:
+        telephone_number: '0987654321'
+        mobile_number: '0987654321'
+        fax_number: '023456789'
+        email: 'contact@hotmail.com'
+        address: 'contact-address'
+        contact: 'contact-test'
+      socialmedia_data:
+        facebook: 'contact-facebook'
+        line: 'contact-line'
+        instagram: 'contact-instagram'
+    add_buy:
+      0:
+        information_data:
+          name: 'buy-name-'
+        product_data:
+          name: 'product-name-one'
+        transfer_data:
+          stock: 'คลัง-ทดสอบ-A'
+        payment_data:
+          amount: '1'
+    add_sell:
+      0:
+        information_data:
+          name: 'sell-name-'
+        product_data:
+          system:
+            name: 'product-name-one'
+        transfer_data:
+          stock: 'คลัง-ทดสอบ-A'
+        payment_data:
+          amount: '1'
+      1:
+        information_data:
+          name: 'sell-name-'
+        product_data:
+          system:
+            name: 'product-name-tow'
+        transfer_data:
+          stock: 'คลัง-ทดสอบ-A'
+        payment_data:
+          amount: '1'
+    summarize_sell:
+      this_year: '2'
+      this_month: '2'
+    graph_detail:
+      category:
+        - 'category-name-one'
+        - 'category-name-tow'
+      product:
+        - 'product-name-one'
+        - 'product-name-tow'
+
+tc_09:
+  pre_data:
+    sell_list_page:
+      main_menu: 'รายการขาย'
+      sub_menu: 'ดูรายการขาย'
+    warehouse_list_page:
+      main_menu: 'สินค้า'
+      sub_menu: 'คลังสินค้า/สาขา'
+  test_data:
+    add_sell:
+      0:
+        information:
+          name: 'SO-CREATE-'
+          create_date:
+            year: '2566'
+            month: '2'
+            day: '1'
+          # expire_date:
+          #   year: '2566'
+          #   month: '2'
+          #   day: '1'
+          # refer: ''
+          funnel: 'FN-SELL'
+          # tax: ''
+          # dealer: ''
+        contact:
+          choice: 'system'    # custom | system
+          detail:
+            code: 'CT-SELL'
+            name: 'CT-SELL-NAME'
+            phone: ''
+            email: ''
+            address: ''
+            branch: 
+              iden: ''
+              name: ''
+              number: ''
+        product:
+          choice: 'test'    # custom | single | multi | test
+          detail:
+            1:
+              code: 'PD-SELL'
+              name: 'PD-SELL-NAME'
+              amount: '1'
+              price: '10'
+              discount: '0'
+        delivery: 
+          channel: 'DV-SELL-DESTINATION'
+          description: 'Payment on delivery'
+        shipping:
+          date:
+            year: ''
+            month: ''
+            day: ''
+          tracking: ''
+        payment:
+          amount: ''
+          channel: 'เงินสด'
+          date_time:
+            date:
+              year: ''
+              month: ''
+              day: ''
+            time:
+              hour: '18:00'
+              minute: '18:00'
+        transfer:
+          choice: 'wait'    # wait | now
+          detail:
+            store: 'WH-SELL-NAME'
+  expect_data:
+    add_sell:
+      in_list: 
+        date: '1 ก.พ. 2566'
+        name: ''
+        contact: 'CT-SELL-NAME'
+        funnel: 'FN-SELL'
+        # deli_date: ''
+        total_price: '30'
+        status_payment: 'รอชำระ'
+        status_transfer:
+          - รอโอน
+          - WH-SELL-NAME
+      in_detail: 
+        main_status_payment: 'รอการชำระเงิน'
+        main_status_transfer: 'รอโอนสินค้า'
+        main_status_delivery: 'DV-SELL-DESTINATION(COD)'
+        sub_status_payment: 'รอการชำระเงิน'
+        sub_status_transfer:
+          - รอโอนสินค้า
+          - WH-SELL-NAME
+        information:
+          name: ''
+          create_date: '1 กุมภาพันธ์ 2566'
+          funnel: 'FN-SELL'
+        contact:
+          user: 'Quality Assurance'
+          name: 'CT-SELL-NAME'
+          code: 'CT-SELL'
+        product:
+          1:
+            code: 'PD-SELL'
+            name: 'PD-SELL-NAME'
+            amount: '1 unit'
+            price: '10'
+          2:
+            code: 'PD-SELL'
+            name: 'PD-SELL-NAME'
+            amount: '1 unit'
+            price: '10'
+        delivery:
+          channel: 'DV-SELL-DESTINATION(COD)'
+        recipient:
+          name: 'CT-SELL-NAME'
+          phone: '0987654321'
+          email: 'automate@hotmail.com'
+          address: '320/187 อาคาร หนึ่ง สริธร คอนโด ต.ประชาธิปัตย์ อ.ธัญบุรี จ.ปทุมธานี 12130'
+
+sell:
+
+  sell_03_01:
+    pre_data:
+      sell_list_page:
+        main_menu: 'รายการขาย'
+        sub_menu: 'ดูรายการขาย'
+    test_data:
+      sell_list_name: 'sell-name-ed'
+
+  sell_03_02:
+    pre_data:
+      create_sell_page:
+        main_menu: 'รายการขาย'
+        sub_menu: 'สร้างรายการขาย'
+      sell_list_page:
+        main_menu: 'รายการขาย'
+        sub_menu: 'ดูรายการขาย'
+    test_data:
+      add_sell:
+        0:
+          information_data:
+            name: 'sell-name-'
+            refer: 'sell-refer'
+            funnel: 'sell-funnel'
+          contact_data:
+            name: 'contact-name'
+            code: 'contact-code-'
+            phone: 'contact-phone'
+            email: 'contact-email'
+            address: '1234 abcd x.xxxxxx y.yyyyyy z.zzzzzz 00000'
+          product_data:
+            custom:
+              code: 'product-code-'
+              name: 'product-name'
+              amount: '1'
+              price: '100'
+          recipient_data:
+            system:
+              choice: true
+          shipping_data:
+            tracking_no: '0123456789'
+          transfer_data:
+            waiting: 'คลังสินค้าหลัก'
+        1:
+          information_data:
+            name: 'sell-name-'
+            refer: 'sell-refer'
+            funnel: 'sell-funnel'
+          contact_data:
+            name: 'contact-name'
+            code: 'contact-code-'
+            phone: 'contact-phone'
+            email: 'contact-email'
+            address: '1234 abcd x.xxxxxx y.yyyyyy z.zzzzzz 00000'
+          product_data:
+            custom:
+              code: 'product-code-'
+              name: 'product-name'
+              amount: '1'
+              price: '100'
+          recipient_data:
+            system:
+              choice: true
+          shipping_data:
+            tracking_no: '0123456789'
+          transfer_data:
+            waiting: 'คลังสินค้าหลัก'
+      delivery_service:
+        sender_data:
+          name: 'sender-name'
+          phone: '0987654321'
+          houseno: '1234/45'
+          province: 'กรุงเทพมหานคร'
+          district: 'ราชเทวี'
+          subdistrict: 'ทุ่งพญาไท'
+          address: '188 อาคารสปริง ทาวเวอร์ ชั้น 20 ยูนิต 1-2 ถนนพญาไท แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400'
+        recipient_data:
+          1:
+            # weight: '50'
+            # dimension:
+            #   Width: '50'
+            #   length: '50'
+            #   height: '50'
+            name: 'recipient-name-1'
+            phone: '0987654321'
+            houseno: '123/45'
+            province: 'กรุงเทพมหานคร'
+            district: 'คลองเตย'
+            subdistrict: 'พระโขนง'
+            zipcode: '10110'
+            address: '1234 abcd พระโขนง คลองเตย กรุงเทพมหานคร 10110'
+          # 2:
+          #   name: 'recipient-name-2'
+          #   phone: 'recipient-phone'
+          #   province: 'กรุงเทพมหานคร'
+          #   district: 'คลองเตย'
+          #   subdistrict: 'พระโขนง'
+          #   zipcode: '10110'
+          #   address: '1234 abcd พระโขนง คลองเตย กรุงเทพมหานคร 10110'
+        transport_data: 'Kerry Express'
+        transport_detail: 'คลังสินค้าหลัก'
+      print_document:
+        sec1: ''
+        sec2: '1 OF 1'
+        sec3: 'Service'
+        sec4: ''
+        sec5: 'DC'
+        sec6: 
+          - 'DEL ROUTE'
+          - '999'
+        sec7: ''
+        sec8: ''
+        sec9: 'ZORT'
+        sec10: ''
+        sec11: ''
+        sec12: 'B9*KB-ASK'
+
+  sell_03_03:
+    pre_data:
+      sell_list_page:
+        main_menu: 'รายการขาย'
+        sub_menu: 'ดูรายการขาย'
+    test_data:
+      name_sell: 'SO-PRINTDOC'
+      print_doc_nomall:
+        size: 'A4'
+        form: 'ทั่วไป'
+        toppic: 'ใบเสร็จรับเงิน'
+      print_doc_invoice:
+        size: 'A4'
+        form: 'ฟอร์มใบกำกับภาษี'
+        toppic: 'ใบเสร็จรับเงิน'
+
+  sell_04_01:
+    pre_data:
+      create_sell_page:
+        main_menu: 'รายการขาย'
+        sub_menu: 'สร้างรายการขาย'
+    test_data:
+      add_sell:
+        information_data:
+          name: 'sell-log-'
+        product_data:
+          system:
+            name: 'product-log'
+        transfer_data:
+          waiting: 'warehouse-log'
+      edit_sell:
+        information_data:
+          refer: 'sell-refer'
+          funnel: 'sell-funnel'
+    expect_data:
+      log_sell:
+        user: 'Quality Assurance'
+        detail:
+          add: 'เพิ่มรายการขาย ()'
+          edit: 'แก้ไขรายการขาย ()'
+          payment: 'เพิ่มข้อมูลการจ่ายเงิน ()'
+          Transfer: 'อัพเดทสถานะรายการขาย ()'
+          cancel: 'ยกเลิกรายการขาย ()'
+
+promotion:
+  promotion_01_01:
+    pre_data:
+      promotion_list_page:
+        main_menu: 'โปรโมชั่น'
+        sub_menu: 'ของแถม'
+    test_data:
+      add_promotion:
+        information:
+          name: 'promotion-'
+          date:
+            start: ''
+            end: ''
+          # period:
+          #   start: ''
+          #   end: ''
+          order:
+            start: 1
+            end: 1
+          minimum: 1000.15
+        product:
+          - 'product-promotion-1'
+          - 'product-promotion-2'
+        gift:
+          - 'product-promotion-0'
+      edit_promotion:
+        product:
+          - 'product-promotion-9'
+      expand_promotion:
+        0:
+          end_order: 2
+          gift:
+            - 'product-promotion-0'
+        1:
+          end_order: 3
+          gift:
+            - 'product-promotion-0'
+    expect_data:
+      test: ''
+
+product:
+  product_01_01:
+    pre_data:
+      buy_list_page:
+        main_menu: 'รายการซื้อ'
+        sub_menu: 'ดูรายการซื้อ'
+      sell_list_page:
+        main_menu: 'รายการขาย'
+        sub_menu: 'ดูรายการขาย'
+      product_list_page:
+        main_menu: 'สินค้า'
+        sub_menu: 'สินค้า'
+    test_data:
+      add_buy:
+        information:
+          name: 'PO-SN-'
+          # date:
+          #   year: '2566'
+          #   month: '3'
+          #   day: '30'
+          # refer: ''
+          # tax: 'ไม่มีภาษี'
+        # contact:
+        #   system:
+        #     code: ''
+        #     name: ''
+        #   customer:
+        #     name: ''
+        #     code: ''
+        #     phone: ''
+        #     email: ''
+        #     address: ''
+        #     branch: 
+        #       true:
+        #         identification: ''
+        #         name: ''
+        #         number: ''
+        product:
+          1:
+            code: ''
+            name: ''
+            amount: '2'
+            price: '10'
+            discount: '0'
+        # payment:
+        #   amount: ''
+        #   channel: 'เงินสด'
+        #   date_time:
+        #     date:
+        #       year: '2566'
+        #       month: '5'
+        #       day: '3'
+        #     time:
+        #       hour: '15:00'
+        #       minute: '15:00'
+        # pransfer:
+        #   wait:
+        #     store: ''
+        #   immediately:
+        #     store: ''
+      add_sell:
+        0:
+          information:
+            name: 'SO-SERIAL-'
+          product:
+            choice: 'custom'    # custom | single | multi | test
+            detail:
+              1:
+                code: ''
+                name: ''
+                amount: '2'
+                price: '10'
+                discount: '0'
+          transfer:
+            choice: 'wait'    # wait | now
+            detail:
+              store: 'warehouse-serialno'
+      add_product:
+        information:
+          feature: 'ไม่มีคุณสมบัติ'
+          type: 'สินค้า'
+          code: 'P-SN'
+          name: 'product-serialno'
+          category: 'ไม่มีหมวดหมู่'
+          # unit: ''
+          # barcode: ''
+          # tag: ''
+        price:
+          purchase: '10'
+          selling: '10'
+        # transport:
+        #   weight: 10
+        #   wide: 1
+        #   long: 1
+        #   high: 1
+        setting:
+          serial: true
+          expiration: false
+        warehouse:
+          amount: '2'
+          store: 'warehouse-serialno'
+      serial_buy:
+        name: ''
+        store: 'warehouse-serialno'
+        serial:
+          1: 
+            serial_on: 'serial_on_test_1'
+          2: 
+            serial_on: 'serial_on_test_2'
+      serial_sell:
+        name_sell: ''
+        name_product: ''
+        serial:
+          1: 
+            serial_on: 'serial_on_test_1'
+          2: 
+            serial_on: 'serial_on_test_2'
+      expect_serial_product:
+        name_product: ''
+        name_sell: ''
+        name_buy: ''
+        store: 'warehouse-serialno'
+        serial:
+          1: 
+            serial_on: 'serial_on_test_1'
+          2: 
+            serial_on: 'serial_on_test_2'
+
+connect:
+  contect_06_01:
+    pre_data:
+      connect_list_page:
+        main_menu: 'ตั้งค่า'
+        sub_menu: 'เชื่อมต่อบริการอื่น'
+    test_data:
+      name: 'LINE MyShop (Automate)'

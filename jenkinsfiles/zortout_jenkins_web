@@ -1,0 +1,38 @@
+pipeline {
+    agent { label "${agent}"}
+    stages {
+        stage('Run test with retry') {
+            steps {
+                script {
+                     common = load "./jenkinsfiles/zortout_common.groovy"
+                     common.runTestWithRetry(concurrent, exclude, include, hagridVersion, testcase_folder, project)
+                    }//end script
+                }//end steps
+            post {
+                always {
+                        echo "Publish Robot Framework test results"
+                        robot(
+                                outputPath: './',
+                                outputFileName: 'output.xml',
+                                reportFileName: 'report.html',
+                                logFileName: 'log.html',
+                                disableArchiveOutput: false,
+                                passThreshold: 100.0,
+                                unstableThreshold: 100.0,
+                                otherFiles: '*.png,*.jpg',
+                                onlyCritical: false
+                            )
+                        robot logFileName: 'log.html', outputFileName: 'output.xml', outputPath: './', reportFileName: 'report.html'
+                        script {
+                           common = load "./jenkinsfiles/zortout_common.groovy"
+                           echo "env.BRANCH_NAME : ${GIT_BRANCH}"
+                           if (GIT_BRANCH == 'master' || GIT_BRANCH == 'main' || GIT_BRANCH == 'origin/master' || GIT_BRANCH == 'origin/main') {
+                              common.notify_result_to_dumbledore("${WORKSPACE}/report.html","${WORKSPACE}/output.xml")
+                              common.notify_result_to_lark('https://open.larksuite.com/open-apis/bot/v2/hook/faee1c62-bc54-4f92-ac2f-915504d882f9')
+                           }
+                        }// end script
+                }//end always
+            }//end post
+        }//end stage run test        
+    }//end stages
+}// end pipeline

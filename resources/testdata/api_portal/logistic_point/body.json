@@ -1,0 +1,22 @@
+{
+    "userId": 1,
+    "merchantId": 33337,
+    "partnerFixName": "flashexpress",
+    "addressList": [
+        {
+            "id": 0,
+            "fromDistrict": "str",
+            "fromState": "str",
+            "fromProvince": "str",
+            "fromPostcode": "str",
+            "todistrict": "str",
+            "tostate": "str",
+            "toprovince": "str",
+            "topostcode": "str",
+            "parcelWeight": "str",
+            "parcelWidth": "str",
+            "parcelHeight": "str",
+            "parcelLength": "str"
+        }
+    ]
+}

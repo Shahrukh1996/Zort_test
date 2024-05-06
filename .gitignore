@@ -1,0 +1,13 @@
+*.png
+*.xml
+*.html
+SeleniumTestability.log
+*.pyc
+**/.DS_Store
+**/._.DS_Store
+robocop.log
+note.txt
+.pabotsuitenames
+logs/*
+pabot_results
+*.log
